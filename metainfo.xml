@@ -19,33 +19,12 @@
                   <timeout>5000</timeout>
                 </commandScript>
               </component>
-              <component>
-                <name>FREEIPA_CLIENT</name>
-                <displayName>FreeIPA client</displayName>
-                <category>CLIENT</category>
-                <cardinality>1+</cardinality>
-                <commandScript>
-                  <script>scripts/client.py</script>
-                  <scriptType>PYTHON</scriptType>
-                  <timeout>5000</timeout>
-                </commandScript>
-                <dependencies>
-                  <dependency>
-                    <name>FREEIPA/FREEIPA_MASTER</name>
-                    <scope>cluster</scope>
-                    <auto-deploy>
-                      <enabled>false</enabled>
-                    </auto-deploy>
-                  </dependency>
-                </dependencies>
-              </component>
             </components>
             <osSpecifics>
               <osSpecific>
                 <osFamily>redhat6</osFamily>
                 <packages>
                   <package><name>*ipa-server</name></package>
-                  <package><name>*ipa-client</name></package>
                   <package><name>bind</name></package>
                   <package><name>bind-dyndb-ldap</name></package>
                 </packages>
@@ -55,7 +34,6 @@
                 <osFamily>redhat7</osFamily>
                 <packages>
                   <package><name>*ipa-server</name></package>
-                  <package><name>*ipa-client</name></package>
                   <package><name>bind</name></package>
                   <package><name>bind-dyndb-ldap</name></package>
                 </packages>
