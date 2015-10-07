@@ -15,7 +15,7 @@ class Slave(Script):
     cmd = cmd + ' --domain=' + params.server_domain
     cmd = cmd + ' --realm=' + params.server_realm
     cmd = cmd + ' --password=' + params.admin_password
-    cmd = cmd + ' --principal=admin' +
+    cmd = cmd + ' --principal=admin'
     cmd = cmd + ' --admin-password=' + params.admin_password
     cmd = cmd + ' --realm=' + params.server_realm
     cmd = cmd + ' --mkhomedir'
